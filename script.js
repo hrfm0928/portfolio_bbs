@@ -7,7 +7,9 @@ var index = 1;
 // var today = new Date();
 // console.log(today);
 
-myTbl     = new Array("(日","(月)","(火)","(水)","(木)","(金)","(土)");
+
+function addElement() {
+myTbl     = new Array("(日)","(月)","(火)","(水)","(木)","(金)","(土)");
 myD       = new Date();
 
 myYear    = myD.getFullYear();
@@ -22,9 +24,7 @@ myMess1   = myYear + "年" + myMonth + "月" + myDate + "日";
 myMess2   = myTbl[myDay] ;
 myMess3   = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
 myMess    = myMess1 + " " + myMess2 + " " + myMess3;
-// document.write( myMess );
 
-function addElement() {
   // inputフォームの入力された値を取得
   var inputDetail = input_text.value;
   console.log(inputDetail);
@@ -32,11 +32,20 @@ function addElement() {
   // liタグを作る
   var li = document.createElement('li');
   console.log(li);
+
+  var li = document.createElement('li2');
+  console.log(li2);
+
+
   // 作ったliタグをulの子要素として出力
   list.appendChild(li);
   // liに対してinputDetailを入れ込む
   // li.innerHTML = "Penguin";
-  li.innerHTML = (index + "." + inputDetail + "(" + myMess + ")");
+  li.innerHTML = (inputDetail);
+  li2.innerHTML = (index + "." + myMess);
+
+  // li.innerHTML = (index + "." + myMess + inputDetail);
+
   // 連番を作る
   // 連番をli.innerHTMLの先頭にぶっこむ
   index++;

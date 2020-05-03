@@ -1,3 +1,22 @@
 #submit {
   color: blue;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 15px;
+}
+
+button {
+  width: 255px;
+  height: 26px;
+  margin-bottom: 1px;
+}
+
+input {
+  width: 460px;
+  height: 70px;
+}
