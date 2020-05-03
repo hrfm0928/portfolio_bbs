@@ -4,10 +4,6 @@ var input_text = document.getElementById("input_text");
 var list = document.getElementById("list");
 var index = 1;
 
-// var today = new Date();
-// console.log(today);
-
-
 function addElement() {
 myTbl     = new Array("(日)","(月)","(火)","(水)","(木)","(金)","(土)");
 myD       = new Date();
@@ -30,22 +26,21 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
   console.log(inputDetail);
 
   // liタグを作る
-  var li = document.createElement('li');
-  console.log(li);
+  var li_time = document.createElement('li');
+  console.log(li_time);
 
-  var li2 = document.createElement('li');
-  console.log(li2);
+  var li_text = document.createElement('li');
+  console.log(li_text);
 
 
   // 作ったliタグをulの子要素として出力
-  list.appendChild(li);
-  list.appendChild(li2);
+  list.appendChild(li_time);
+  list.appendChild(li_text);
+
   // liに対してinputDetailを入れ込む
   // li.innerHTML = "Penguin";
-  li.innerHTML = (inputDetail);
-  li2.innerHTML = (index + "." + myMess);
-
-  // li.innerHTML = (index + "." + myMess + inputDetail);
+  li_time.innerHTML = (index + ". " + myMess);
+  li_text.innerHTML = (inputDetail);
 
   // 連番を作る
   // 連番をli.innerHTMLの先頭にぶっこむ
