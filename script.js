@@ -33,12 +33,13 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
   var li = document.createElement('li');
   console.log(li);
 
-  var li = document.createElement('li2');
+  var li2 = document.createElement('li');
   console.log(li2);
 
 
   // 作ったliタグをulの子要素として出力
   list.appendChild(li);
+  list.appendChild(li2);
   // liに対してinputDetailを入れ込む
   // li.innerHTML = "Penguin";
   li.innerHTML = (inputDetail);
