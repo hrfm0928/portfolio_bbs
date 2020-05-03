@@ -4,6 +4,25 @@ var input_text = document.getElementById("input_text");
 var list = document.getElementById("list");
 var index = 1;
 
+
+
+
+// function checkForm(){
+//   if(document.form1.input01.value == "" || document.form1.input02.value == ""){
+//       alert("必須項目を入力して下さい。");
+// return false;
+//   }else{
+// return true;
+//   }
+// }
+
+// function check()
+// {
+// 	txt = document.myFORM.myTEXT.value;
+// 	if (txt == "") alert("入力されていません");
+// }
+
+
 function addElement() {
 myTbl     = new Array("(日)","(月)","(火)","(水)","(木)","(金)","(土)");
 myD       = new Date();
@@ -26,10 +45,10 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
   console.log(inputDetail);
 
   // liタグを作る
-  var li_time = document.createElement('li');
+  var li_time = document.createElement('p');
   console.log(li_time);
 
-  var li_text = document.createElement('li');
+  var li_text = document.createElement('p');
   console.log(li_text);
 
 
