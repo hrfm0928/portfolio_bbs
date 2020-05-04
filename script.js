@@ -24,7 +24,8 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
 
 // textareaでテキストが空の場合のアラート処理
   if(input_text.value === ""){
-    alert("入力してください");  
+    alert("入力してください"); 
+    return false; 
 }
 
   // inputフォームの入力された値を取得
