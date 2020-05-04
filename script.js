@@ -4,29 +4,11 @@ var input_text = document.getElementById("input_text");
 var list = document.getElementById("list");
 var index = 1;
 
-
-
-
-// function checkForm(){
-//   if(document.form1.input01.value == "" || document.form1.input02.value == ""){
-//       alert("必須項目を入力して下さい。");
-// return false;
-//   }else{
-// return true;
-//   }
-// }
-
-// function check()
-// {
-// 	txt = document.myFORM.myTEXT.value;
-// 	if (txt == "") alert("入力されていません");
-// }
-
-
 function addElement() {
+
+// myMess = 日付・時間・曜日など
 myTbl     = new Array("(日)","(月)","(火)","(水)","(木)","(金)","(土)");
 myD       = new Date();
-
 myYear    = myD.getFullYear();
 myMonth   = myD.getMonth() + 1;
 myDate    = myD.getDate();
@@ -34,35 +16,43 @@ myDay     = myD.getDay();
 myHours   = myD.getHours();
 myMinutes = myD.getMinutes();
 mySeconds = myD.getSeconds();
-
 myMess1   = myYear + "年" + myMonth + "月" + myDate + "日";
 myMess2   = myTbl[myDay] ;
 myMess3   = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
+
 myMess    = myMess1 + " " + myMess2 + " " + myMess3;
+
+// textareaでテキストが空の場合のアラート処理
+  if(input_text.value === ""){
+    alert("入力してください");  
+}
 
   // inputフォームの入力された値を取得
   var inputDetail = input_text.value;
   console.log(inputDetail);
 
-  // liタグを作る
-  var li_time = document.createElement('p');
-  console.log(li_time);
+  // 必要なタグを生成する・li・p・p
+  var item = document.createElement('li');
+  var current_time = document.createElement('p');
+  var output_text = document.createElement('p');
 
-  var li_text = document.createElement('p');
-  console.log(li_text);
-
+  console.log(item);
+  console.log(current_time);
+  console.log(output_text);
 
   // 作ったliタグをulの子要素として出力
-  list.appendChild(li_time);
-  list.appendChild(li_text);
+  list.appendChild(item);
 
-  // liに対してinputDetailを入れ込む
-  // li.innerHTML = "Penguin";
-  li_time.innerHTML = (index + ". " + myMess);
-  li_text.innerHTML = (inputDetail);
+  // 作ったliタグをulの子要素として出力
+  item.appendChild(current_time);
+  item.appendChild(output_text);
 
+
+  // current_timeに対してindex・myMessを入れ込む
+  current_time.innerHTML = (index + ". " + myMess);
+  // output_textに対してinputDetailを入れ込む
+  output_text.innerHTML = (inputDetail);
   // 連番を作る
-  // 連番をli.innerHTMLの先頭にぶっこむ
   index++;
 }
 
