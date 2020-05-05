@@ -22,15 +22,25 @@ myMess3   = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
 
 myMess    = myMess1 + " " + myMess2 + " " + myMess3;
 
+//文字の出力位置を指定する
+target = document.getElementById("output");
+
+// inputフォームの入力された値を取得
+var inputDetail = input_text.value;
+console.log(inputDetail);
+
 // textareaでテキストが空の場合のアラート処理
-  if(input_text.value === ""){
+  if(inputDetail === ""){
     alert("入力してください"); 
     return false; 
   }
-
-  // inputフォームの入力された値を取得
-  var inputDetail = input_text.value;
-  console.log(inputDetail);
+// textareaでテキストが140文字越えたアラート処理
+var txt_limit = 140;//最大文字数
+var check_limit = inputDetail.length; 
+  if(check_limit > txt_limit){
+    alert('入力文字数が '+txt_limit+'文字を越えました');
+    return false; 
+}
 
   // 必要なタグを生成する・li・p・p
   var item = document.createElement('li');
@@ -56,15 +66,8 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
   // 連番を作る
   index++;
 
-  // textareaでテキストが140文字越えたアラート処理
-  // var txt_limit = 4;//最大文字数
-  // var check_limit = input_text.value.length; 
-  //   if(check_limit > txt_limit){
-  //     alert('入力文字数が '+txt_limit+'文字を越えました');
-  //     return false; 
-
-  // }
-
+  // 入力後にテキストエリア内の文字をリセットさせる
+  document.sample_form.input_text.value = "";
 }
 // ulの中(子要素)としてliタグを作ってinputの値を出力する
 // 関数(メソッド,function) とは何らかの処理を行うもの
