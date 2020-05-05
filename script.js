@@ -26,7 +26,7 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
   if(input_text.value === ""){
     alert("入力してください"); 
     return false; 
-}
+  }
 
   // inputフォームの入力された値を取得
   var inputDetail = input_text.value;
@@ -55,8 +55,17 @@ myMess    = myMess1 + " " + myMess2 + " " + myMess3;
   output_text.innerHTML = (inputDetail);
   // 連番を作る
   index++;
-}
 
+  // textareaでテキストが140文字越えたアラート処理
+  // var txt_limit = 4;//最大文字数
+  // var check_limit = input_text.value.length; 
+  //   if(check_limit > txt_limit){
+  //     alert('入力文字数が '+txt_limit+'文字を越えました');
+  //     return false; 
+
+  // }
+
+}
 // ulの中(子要素)としてliタグを作ってinputの値を出力する
 // 関数(メソッド,function) とは何らかの処理を行うもの
 // > ボタンを押した処理
