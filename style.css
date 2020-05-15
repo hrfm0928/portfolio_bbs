@@ -7,17 +7,10 @@ li {
 }
 
 button {
-  width: 78px;
+  width: 255px;
   height: 26px;
   margin-bottom: 3px;
   color: #000000;
-}
-
-.name-field {
-  width: 122px;
-  height: 19px;
-  display: block;
-  resize: none;
 }
 
 .text-field {
@@ -25,12 +18,4 @@ button {
   height: 83px;
   display: block;
   resize: none;
-}
-
-.name {
-  display: flex;
-}
-
-.name-display {
-  margin: 1px 0px 0px 8px;
 }
