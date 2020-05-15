@@ -46,17 +46,11 @@ var inputDetail_text = input_text.value;
 
   // 必要なタグを生成する・li・p・p
   var item = document.createElement('li');
-  var color_name = document.createElement('span');
   var current_time = document.createElement('p');
-  // var output_name = document.createElement('p');
+  var output_name = document.createElement('p');
   var output_text = document.createElement('p');
   // var index = document.createElement('span');
   // var myMess = document.createElement('span');
-
-  console.log(color_name);
-  console.log(index);
-  console.log(myMess);
-  console.log(current_time);
 
 
   // 作ったliタグをulの子要素として出力
@@ -72,15 +66,13 @@ var inputDetail_text = input_text.value;
 // output_nameに対してinputDetailを入れ込む
 // output_textに対してinputDetailを入れ込む
 
-color_name.innerHTML = inputDetail_name;
+output_name.innerHTML = inputDetail_name;
 
-var kk = color_name.innerHTML;
+var name = output_name.innerHTML;
 
-  current_time.innerHTML = index + "."  + "名前：" + kk +" "+ myMess;
+  current_time.innerHTML = index + "."  + "名前：" + name +" "+ myMess;
   // color_name.innerHTML = inputDetail_name;
   output_text.innerHTML = inputDetail_text;
-
-  output_text.style.color = 'red'; 
   
   // 連番を作る
   index++;
