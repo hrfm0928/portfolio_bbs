@@ -47,7 +47,7 @@ var inputDetail_text = input_text.value;
   // 必要なタグを生成する・li・p・p
   var item = document.createElement('li');
   var current_time = document.createElement('p');
-  var output_name = document.createElement('p');
+  var output_name = document.createElement('span');
   var output_text = document.createElement('p');
   // var index = document.createElement('span');
   // var myMess = document.createElement('span');
