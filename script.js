@@ -68,7 +68,7 @@ var inputDetail_text = input_text.value;
 output_name.style.color = "green";
 output_name.innerHTML = inputDetail_name;
 
-var name = output_name.innerHTML;
+var name = output_name.outerHTML;
 
   current_time.innerHTML = index + "."  + "名前：" + name +" "+ myMess;
   // color_name.innerHTML = inputDetail_name;
