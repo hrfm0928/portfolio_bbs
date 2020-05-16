@@ -65,7 +65,7 @@ var inputDetail_text = input_text.value;
 // current_timeに対してindex・myMessを入れ込む
 // output_nameに対してinputDetailを入れ込む
 // output_textに対してinputDetailを入れ込む
-
+output_name.style.color = "green";
 output_name.innerHTML = inputDetail_name;
 
 var name = output_name.innerHTML;
