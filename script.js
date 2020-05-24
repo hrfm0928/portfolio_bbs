@@ -47,7 +47,7 @@ var inputDetail_text = input_text.value;
   // 必要なタグを生成する・li・p・p
   var item = document.createElement('li');
   var current_time = document.createElement('p');
-  var output_name = document.createElement('p');
+  var output_name = document.createElement('span');
   var output_text = document.createElement('p');
   // var index = document.createElement('span');
   // var myMess = document.createElement('span');
@@ -65,10 +65,10 @@ var inputDetail_text = input_text.value;
 // current_timeに対してindex・myMessを入れ込む
 // output_nameに対してinputDetailを入れ込む
 // output_textに対してinputDetailを入れ込む
-
+output_name.style.color = "green";
 output_name.innerHTML = inputDetail_name;
 
-var name = output_name.innerHTML;
+var name = output_name.outerHTML;
 
   current_time.innerHTML = index + "."  + "名前：" + name +" "+ myMess;
   // color_name.innerHTML = inputDetail_name;
